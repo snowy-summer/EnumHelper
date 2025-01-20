@@ -1,8 +1,11 @@
 import EnumHelper
 
-let a = 17
-let b = 25
+@IdentifiableEnum
+enum a {
+    case add
+}
 
-let (result, code) = #stringify(a + b)
 
-print("The value \(result) was produced by the code \"\(code)\"")
+struct aa {
+    var add: String
+}
