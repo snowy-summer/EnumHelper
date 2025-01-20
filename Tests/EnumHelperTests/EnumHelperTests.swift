@@ -28,9 +28,7 @@ final class EnumHelperTests: XCTestCase {
             enum DiarySheetType {
                 case add
                 case edit
-            }
             
-            extension DiarySheetType: Identifiable {
                 var id: String {
                     switch self {
                     case .add:
@@ -39,6 +37,9 @@ final class EnumHelperTests: XCTestCase {
                         return "edit"
                     }
                 }
+            }
+            
+            extension DiarySheetType: Identifiable {
             }
             """,
             macros: testMacros
